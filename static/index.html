@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Grand Prix: local decision models racing</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="titles">
+        <h1>Grand Prix</h1>
+        <p class="sub">
+          Local decision models racing one circuit. Each car is steered by one
+          <code>/v1/systemone</code> call: a state in, a probability for every
+          steering option out, in a single forward pass, zero tokens generated.
+          The fan in front of each car is that probability, drawn.
+        </p>
+      </div>
+      <div class="controls">
+        <label class="picker">
+          <span class="k">map</span>
+          <select id="track"></select>
+        </label>
+        <button id="refresh" class="ghost">Refresh engines</button>
+        <button id="start">Start race</button>
+        <button id="stop" class="ghost">Stop</button>
+      </div>
+      <div class="race-state">
+        <div><span class="k">race</span><span id="race-id">-</span></div>
+        <div><span class="k">clock</span><span id="clock">0.0s</span></div>
+        <div><span class="k">laps</span><span id="laps">-</span></div>
+        <div><span class="k">map</span><span id="track-name">-</span></div>
+      </div>
+    </header>
+
+    <section class="selector">
+      <div class="selector-head">
+        <h2>Racers</h2>
+        <span id="selection-count" class="meta"></span>
+        <button id="select-all" class="ghost small">All</button>
+        <button id="select-none" class="ghost small">None</button>
+      </div>
+      <div class="catalogue" id="catalogue"></div>
+    </section>
+
+    <main id="stage">
+      <div id="stage-hint">
+        Pick your racers and a map, then press <b>Start race</b>.
+        <span class="meta">Nothing runs until you do.</span>
+      </div>
+    </main>
+
+    <footer>
+      <div class="panel-block">
+        <h2>Standings</h2>
+        <div id="standings" class="standings"></div>
+      </div>
+      <div class="panel-block">
+        <h2>Notes</h2>
+        <div id="notes" class="notes"></div>
+      </div>
+      <div class="byline">
+        Built By <a href="https://harishkotra.me">Harish Kotra</a>
+        <span class="sep">|</span>
+        <a href="https://dailybuild.xyz">Checkout my other builds</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/static/app.js"></script>
+  </body>
+</html>

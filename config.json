@@ -1,0 +1,59 @@
+{
+  "race": {
+    "laps": 2,
+    "time_cap_s": 240,
+    "sim_hz": 60,
+    "tick_hz": 20,
+    "policy": "sample",
+    "seed": 20261015,
+    "decision_timeout_s": 12,
+    "track": "circuit"
+  },
+  "racers": [
+    {
+      "key": "julia-1-144m",
+      "label": "Julia-1 144M",
+      "type": "llama_cpp",
+      "port": 8081,
+      "model": "ggml-org/Julia-1-GGUF:Q8_0",
+      "color": "#7ee787",
+      "note": "modern-bert encoder, 144M, Apache-2.0, the fastest arm"
+    },
+    {
+      "key": "laya-421m",
+      "label": "Laya 421M",
+      "type": "llama_cpp",
+      "port": 8082,
+      "model": "ggml-org/Laya-GGUF:Q8_0",
+      "color": "#79c0ff",
+      "note": "ModernBERT-large, 421M, Apache-2.0, sharpens past ten options"
+    },
+    {
+      "key": "kev-0.8b",
+      "label": "Kev 0.8B",
+      "type": "llama_cpp",
+      "port": 8083,
+      "model": "ggml-org/Kev-0.8B-GGUF:Q8_0",
+      "color": "#ffa657",
+      "note": "Qwen3.5-0.8B plus the Kev LoRA, 812 MB, Apache-2.0, causal backbone"
+    },
+    {
+      "key": "tev1-0.8b",
+      "label": "Tev1 0.8B",
+      "type": "ollama",
+      "port": 11434,
+      "model": "tev1:0.8b",
+      "color": "#ff7b72",
+      "note": "Together AI, 752 MB, served through Ollama, licence still being finalised"
+    },
+    {
+      "key": "clef-flash",
+      "label": "Clef-flash 9B",
+      "type": "ollama",
+      "port": 11434,
+      "model": "clef-flash:9b",
+      "color": "#f2cc60",
+      "note": "Cloudflare, 9B on a Qwen3.5-9B base, Apache-2.0, served locally by Ollama at 11 GB"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+# ---------------------------------------------------------------------------
+# AI Grand Prix
+#
+# Two rules for this file:
+#   1. No trailing comments. Git only treats # as a comment when it is the first
+#      character on the line, so "runs/   # telemetry" would be a literal
+#      pattern that matches nothing.
+#   2. Anything listed here must be regenerable. If a file is ignored, the docs
+#      must say which command brings it back.
+# ---------------------------------------------------------------------------
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.venv/
+venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Node (used only to vendor the PixiJS bundle) ---------------------------
+# The shipped renderer is static/vendor/pixi.min.mjs, which IS tracked.
+# node_modules is 90 MB of package sources and is not needed to run anything.
+node_modules/
+
+# --- Secrets and local overrides -------------------------------------------
+# The project needs no credentials, no cloud account and no tokens. This guard
+# exists so a fork that adds one cannot commit it by accident.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+
+# --- Race output (regenerate with ./run.sh) --------------------------------
+runs/
+logs/
+*.log
+*.pid
+
+# --- Model weights (never commit these; they are gigabytes) ----------------
+*.gguf
+*.safetensors
+*.bin
+models/
+.cache/
+
+# --- OS and editors --------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- Scratch ---------------------------------------------------------------
+*.tmp
+*.bak
+*.orig
+*.rej
+
+content/
