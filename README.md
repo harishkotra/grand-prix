@@ -55,7 +55,7 @@ Then, to race real models, bring the engines up and start the dashboard:
 
 `./run.sh` opens `http://127.0.0.1:8078/`. Nothing races until you press **Start race**.
 
-Full setup, including the Ollama path for Clef-flash and the memory budget, is in [SETUP.md](SETUP.md) and the machine specific runbook in [M1-PRO.md](M1-PRO.md).
+Full setup, including the Ollama path for Clef-flash and the memory budget, is in [SETUP.md](SETUP.md).
 
 ## What you see
 
