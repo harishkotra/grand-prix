@@ -10,6 +10,11 @@
 
 ![The dashboard with two racers selected on the Oval](results/ui-final.png)
 
+<img width="1795" height="1251" alt="screencapture-127-0-0-1-8078-2026-10-15-22_04_21" src="https://github.com/user-attachments/assets/af9219df-20a5-438e-ab39-dcdda8893405" />
+<img width="1795" height="1251" alt="screencapture-127-0-0-1-8078-2026-10-15-22_04_13" src="https://github.com/user-attachments/assets/93a686b6-72a9-4d44-80e6-cabb19590b42" />
+<img width="1795" height="1251" alt="screencapture-127-0-0-1-8078-2026-10-15-22_03_42" src="https://github.com/user-attachments/assets/2c7776d2-ba00-4223-9fb3-b72b914881e0" />
+
+
 ## What this is
 
 AI Grand Prix is a race between small open-weight **decision models**. Each model drives its own car on the same circuit, and every steering move you see on screen is a real prediction from a model running on your machine.
